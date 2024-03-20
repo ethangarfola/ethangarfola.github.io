@@ -4,3 +4,11 @@ p {
 #sports {
     font-size: larger;
 }
+
+.super {
+    border: 2px black solid;
+}
+
+.cool {
+    color: red;
+}
