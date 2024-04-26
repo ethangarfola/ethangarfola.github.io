@@ -33,4 +33,42 @@ for (let i = 1; i <= 10; i++) {
         factorial *= j;
     }
     console.log(i + "! =", factorial);
+
+    // Task 6
+console.log("Task 6");
+let arr = [3, 1, 4, 1, 5];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+// Task 7
+console.log("Task 7");
+for (let i = arr.length - 1; i >= 0; i--) {
+    console.log(arr.at(i));
+}
+
+// Task 8
+console.log("Task 8");
+let cubeNumbers = [];
+for (let i = 1; i <= 10; i++) {
+    cubeNumbers.push(Math.pow(i, 3));
+}
+console.log(cubeNumbers);
+
+// Task 9
+console.log("Task 9");
+let fibonacciNumbers = [0, 1];
+for (let i = 2; i < 10; i++) {
+    fibonacciNumbers.push(fibonacciNumbers[i - 1] + fibonacciNumbers[i - 2]);
+}
+console.log(fibonacciNumbers);
+
+// Task 10
+console.log("Task 10");
+let reversedArr = [];
+for (let i = arr.length - 1; i >= 0; i--) {
+    reversedArr.push(arr[i]);
+}
+console.log(reversedArr);
+
 }
