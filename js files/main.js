@@ -9,5 +9,5 @@ function changeSlide(n) {
 
 function goToBuild() {
     const buildPages = ['arc.html', 'solar.html', 'stasis.html', 'strand.html', 'void.html'];
-    window.location.href = `../html files/${buildPages[currentSlide]}`;
+    window.location.href = `html files/${buildPages[currentSlide]}`;
 }

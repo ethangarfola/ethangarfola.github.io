@@ -6,7 +6,7 @@ body, html {
 }
 
 body {
-    background: url('../images/d2 background.jpeg') no-repeat center center fixed;
+    background: url('images/d2 background.jpeg') no-repeat center center fixed;
     background-size: cover;
     filter: blur(8px);
 }
@@ -15,8 +15,13 @@ body {
     position: relative;
     z-index: 1;
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 0 auto;
+    max-width: 800px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1, h2 {
@@ -38,6 +43,10 @@ h2 {
     max-width: 80%;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .slide {
@@ -58,10 +67,17 @@ h2 {
     outline: none;
     font-size: 18px;
     transition: 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.prev:hover, .next:hover, .go-to:hover {
-    background-color: #ddd;
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 .background-text {
