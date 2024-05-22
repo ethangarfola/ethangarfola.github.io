@@ -1,29 +1,46 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slideshow img');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
 
-showSlide(slideIndex);
-
-prevButton.addEventListener('click', () => {
-    slideIndex--;
-    if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
-    }
-    showSlide(slideIndex);
-});
-
-nextButton.addEventListener('click', () => {
-    slideIndex++;
-    if (slideIndex >= slides.length) {
-        slideIndex = 0;
-    }
-    showSlide(slideIndex);
-});
-
-function showSlide(index) {
-    slides.forEach((slide) => {
-        slide.style.display = 'none';
-    });
-    slides[index].style.display = 'block';
+function showSlide(n) {
+    slides[currentSlide].style.display = "none";
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].style.display = "block";
 }
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function goToSlidePage() {
+    let pageUrl = ""; // Add your page URLs here
+    switch (currentSlide) {
+        case 0:
+            pageUrl = "page1.html";
+            break;
+        case 1:
+            pageUrl = "page2.html";
+            break;
+        case 2:
+            pageUrl = "page3.html";
+            break;
+        case 3:
+            pageUrl = "page4.html";
+            break;
+        case 4:
+            pageUrl = "page5.html";
+            break;
+        default:
+            pageUrl = "error.html";
+    }
+    window.location.href = pageUrl;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("nextBtn").addEventListener("click", nextSlide);
+    document.getElementById("prevBtn").addEventListener("click", prevSlide);
+    document.getElementById("showMeBtn").addEventListener("click", goToSlidePage);
+});
