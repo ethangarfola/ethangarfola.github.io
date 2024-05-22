@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destiny 2 Hunter Builds</title>
+    <title>Destiny 2 Builds</title>
+    <link rel="stylesheet" href="../css files/main.css">
 </head>
-
 <body>
+    <div class="container">
+        <h1>Destiny 2 Builds</h1>
+        <h2>By EasyE-GOAT</h2>
+        <div class="slideshow-container">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <img class="slide" src="../images/arc/arc build.png" alt="Arc Build">
+            <img class="slide" src="../images/solar/solar build.png" alt="Solar Build" style="display:none">
+            <img class="slide" src="../images/stasis/stasis build.png" alt="Stasis Build" style="display:none">
+            <img class="slide" src="../images/strand/strand build.png" alt="Strand Build" style="display:none">
+            <img class="slide" src="../images/void/void build.png" alt="Void Build" style="display:none">
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <button class="go-to" onclick="goToBuild()">Go to</button>
+    </div>
+    <div class="background-text">
+        <p>Some background on the game...</p>
+    </div>
+    <script src="../js files/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,71 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Consolas, sans-serif;
+    color: white;
+}
+
+body {
+    background: url('../images/d2 background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px);
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1, h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.prev, .next, .go-to {
+    cursor: pointer;
+    padding: 16px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    outline: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover, .go-to:hover {
+    background-color: #ddd;
+}
+
+.background-text {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
