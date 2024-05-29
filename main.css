@@ -71,12 +71,16 @@ body::before {
     min-width: 100%;
     height: auto;
     object-fit: contain;
-    transition: opacity 1s ease;
+    transition: transform 0.3s ease, opacity 1s ease;
     display: none;
 }
 
 .slides:first-child {
     display: block;
+}
+
+.slides:hover {
+    transform: scale(1.1);
 }
 
 .prev, .next {
@@ -89,7 +93,7 @@ body::before {
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: transform 0.2s ease; /* Added transition */
+    transition: transform 0.2s ease;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -101,7 +105,7 @@ body::before {
 }
 
 .prev:active, .next:active {
-    transform: translateY(2px); /* Move button down when pressed */
+    transform: translateY(2px);
 }
 
 .prev {
