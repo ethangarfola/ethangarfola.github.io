@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: Consolas, monospace;
+    background-color: #333; /* Dark gray background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(197, 64, 238); /* Void color */
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+img:hover {
+    transform: scale(1.1); /* Scale up image on hover */
+}
