@@ -79,10 +79,6 @@ body::before {
     display: block;
 }
 
-.slides:hover {
-    transform: scale(1.1);
-}
-
 .prev, .next {
     cursor: pointer;
     position: absolute;
